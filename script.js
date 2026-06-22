@@ -1,6 +1,5 @@
 function getComputerChoice() {
     let number = Math.random()
-
     if (number <= 0.333) {
         return "rock"
     } else if (number <= 0.666) { 
@@ -12,8 +11,16 @@ function getComputerChoice() {
 
 getComputerChoice()
 
+
 function getHumanChoice() {
     let option = prompt("Choose rock, paper or scissors!")
+    if (option === null) {
+        console.log("You cancelled the game!")
+        return null
+    }
+
+    option = option.toLowerCase()
+
     if (option === "rock") {
         return "rock"
     } else if (option === "paper") {
@@ -21,15 +28,14 @@ function getHumanChoice() {
     } else if (option === "scissors") {
         return "scissors"
     } else {
-        return "You choose the wrong option!"
+        console.log("You choose the wrong option!")
+        return null
     }
 }
 
 
-
 let humanScore = 0
 let computerScore = 0
-
 
 function playRound(humanChoice, computerChoice) {
     if (humanChoice === "rock" && computerChoice === "rock") {
@@ -59,9 +65,17 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
 
-console.log(playRound(humanSelection, computerSelection))
-console.log(humanScore)
-console.log(computerScore)
+function playGame() {
+    const humanSelection = getHumanChoice()
+    const computerSelection = getComputerChoice()
+    console.log(playRound(humanSelection, computerSelection))
+    console.log(humanScore)
+    console.log(computerScore)
+}
+
+playGame()
+playGame()
+playGame()
+playGame()
+playGame()
