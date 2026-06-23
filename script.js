@@ -28,7 +28,7 @@ function getHumanChoice() {
     } else if (option === "scissors") {
         return "scissors"
     } else {
-        console.log("You choose the wrong option!")
+        console.log("You chose the wrong option!")
         return null
     }
 }
@@ -74,8 +74,22 @@ function playGame() {
     console.log(computerScore)
 }
 
-playGame()
-playGame()
-playGame()
-playGame()
-playGame()
+
+
+
+function finalResults() { 
+    playGame()
+    playGame()
+    playGame()
+    playGame()
+    playGame()
+    if (humanScore > computerScore) {
+        console.log("You won the game!")
+    } else if (computerScore > humanScore) {
+        console.log("You lost the game!")
+    } else {
+        console.log("The final result is a draw!")
+    }
+}
+
+finalResults()
