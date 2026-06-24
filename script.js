@@ -38,30 +38,19 @@ let humanScore = 0
 let computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
-    if (humanChoice === "rock" && computerChoice === "rock") {
-        return 'draw'
-    } else if (humanChoice === "rock" && computerChoice === "paper") {
-        computerScore ++
-        return 'you lose! paper beats rock!'    
+    if (humanChoice === computerChoice) {
+        return "draw"
     } else if (humanChoice === "rock" && computerChoice === "scissors") {
-        humanScore ++
-        return 'you won! rock beats scissors!'
-    } else if (humanChoice === "paper" && computerChoice === "paper") {
-        return 'draw'
+        humanScore ++ 
+        return "you won this round!"
     } else if (humanChoice === "paper" && computerChoice === "rock") {
         humanScore ++
-        return 'you won! paper beats rock!'
-    } else if (humanChoice === "paper" && computerChoice === "scissors") {
-        computerScore ++
-        return 'you lose! scissors beats paper!'
-    } else if (humanChoice === "scissors" && computerChoice === "scissors") {
-        return 'draw'
-    } else if (humanChoice === "scissors" && computerChoice === "rock") {
-        computerScore ++
-        return 'you lose! rock beats scissors!'
+        return "you won this round!"
     } else if (humanChoice === "scissors" && computerChoice === "paper") {
-        humanScore ++
-        return 'you won! scissors beats paper!'
+        humanScore ++ 
+        return "you won this round!"
+    } else {
+        return "you lose this round!"
     }
 }
 
