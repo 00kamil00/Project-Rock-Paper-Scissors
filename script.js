@@ -50,6 +50,7 @@ function playRound(humanChoice, computerChoice) {
         humanScore ++ 
         return "you won this round!"
     } else {
+        computerScore ++ 
         return "you lose this round!"
     }
 }
