@@ -1,3 +1,12 @@
+const buttons = document.querySelectorAll("button")
+buttons.forEach((button) => {
+    button.addEventListener("click", () => {
+        console.log(playRound(button.textContent, getComputerChoice()))
+        
+    })
+})
+
+
 function getComputerChoice() {
     let number = Math.random()
     if (number <= 0.333) {
@@ -6,30 +15,6 @@ function getComputerChoice() {
         return "paper"
     } else {
         return "scissors"
-    }
-}
-
-getComputerChoice()
-
-
-function getHumanChoice() {
-    let option = prompt("Choose rock, paper or scissors!")
-    if (option === null) {
-        console.log("You cancelled the game!")
-        return null
-    }
-
-    option = option.toLowerCase()
-
-    if (option === "rock") {
-        return "rock"
-    } else if (option === "paper") {
-        return "paper"
-    } else if (option === "scissors") {
-        return "scissors"
-    } else {
-        console.log("You chose the wrong option!")
-        return null
     }
 }
 
@@ -56,23 +41,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 
-function playGame() {
-    const humanSelection = getHumanChoice()
-    const computerSelection = getComputerChoice()
-    console.log(playRound(humanSelection, computerSelection))
-    console.log(humanScore)
-    console.log(computerScore)
-}
-
-
-
-
 function finalResults() { 
-    playGame()
-    playGame()
-    playGame()
-    playGame()
-    playGame()
     if (humanScore > computerScore) {
         console.log("You won the game!")
     } else if (computerScore > humanScore) {
@@ -81,5 +50,3 @@ function finalResults() {
         console.log("The final result is a draw!")
     }
 }
-
-finalResults()
