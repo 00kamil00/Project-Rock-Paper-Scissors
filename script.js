@@ -7,6 +7,11 @@ buttons.forEach((button) => {
         const roundResult = playRound(button.textContent, getComputerChoice())
         resultsDiv.textContent = `${roundResult} | Player: ${humanScore} - Computer: ${computerScore}`
         
+        if (humanScore === 5) {
+            resultsDiv.textContent = "🏆 Congratulations! You won the game!"
+        } else if (computerScore === 5) {
+            resultsDiv.textContent = "🤖 Game Over! You lose the game!"
+        }
     })
 })
 
