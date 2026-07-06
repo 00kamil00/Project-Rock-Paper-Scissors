@@ -1,7 +1,11 @@
 const buttons = document.querySelectorAll("button")
+const resultsDiv = document.querySelector("#results")
+
+
 buttons.forEach((button) => {
     button.addEventListener("click", () => {
-        console.log(playRound(button.textContent, getComputerChoice()))
+        const roundResult = playRound(button.textContent, getComputerChoice())
+        resultsDiv.textContent = `${roundResult} | Player: ${humanScore} - Computer: ${computerScore}`
         
     })
 })
