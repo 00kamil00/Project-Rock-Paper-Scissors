@@ -2,18 +2,14 @@
 
 My very first JavaScript project, built as part of **The Odin Project** curriculum. 
 
-It is a classic Rock, Paper, Scissors game played entirely inside the browser console.
+The game has been upgraded from a simple console-based application to an interactive web page utilizing DOM manipulation!
 
 ## 🚀 Features
-- Plays a full match consisting of 5 rounds.
-- Takes player input via the browser's `prompt()`.
-- Generates randomized computer choices and tracks scores dynamically.
-- Announces the ultimate winner or a draw at the end.
 
-## 🎮 How to Play
-1. Open your browser's developer console (`F12`).
-2. Run the code and type your choice (`rock`, `paper`, or `scissors`) in the pop-up windows.
-3. Follow the round results and the final score in the console.
+* **User Interface (UI):** Player choices are made via clickable buttons directly on the page.
+* **Dynamic Results:** Round outcomes and real-time scores are displayed instantly in the browser-no need to open the console.
+* **First to 5 Wins:** The system automatically tracks both human and computer scores, announcing the ultimate winner as soon as someone reaches 5 points.
+* **Randomized AI:** The computer generates random choices (Rock, Paper, or Scissors) using robust conditional logic.
 
 ---
-Built to practice JavaScript fundamentals (functions, conditionals, variables, and basic logic).
+Built to practice JavaScript fundamentals, including functions, conditionals, event listeners, and basic DOM manipulation.
